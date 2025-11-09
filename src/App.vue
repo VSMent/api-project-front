@@ -5,24 +5,24 @@ import TheWelcome from './components/TheWelcome.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+<!--    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />-->
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+<!--    <div class="wrapper">-->
+<!--      <HelloWorld msg="You did it!" />-->
+<!--    </div>-->
+
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/events">Events</RouterLink>
+      <RouterLink to="/chat">Chat</RouterLink>
+      <RouterLink to="/integrations">Integrations</RouterLink>
+      <RouterLink to="/settings">Settings</RouterLink>
+    </nav>
   </header>
-
   <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
-  <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/events">Events</RouterLink>
-    <RouterLink to="/chat">Chat</RouterLink>
-    <RouterLink to="/logs">Logs</RouterLink>
-    <RouterLink to="/settings">Settings</RouterLink>
-  </nav>
+
 
   <main>
-    <TheWelcome />
     <RouterView />
   </main>
 </template>

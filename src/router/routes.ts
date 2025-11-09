@@ -1,31 +1,34 @@
-import HelloWorld from '../components/HelloWorld.vue'
-import WelcomeItem from '../components/WelcomeItem.vue'
+import HomeView from '../views/HomeView.vue'
+import EventListView from '../views/EventListView.vue'
+import EventDetailView from '../views/EventDetailView.vue'
+import IntegrationsView from '../views/IntegrationsView.vue'
+import SettingsView from '../views/SettingsView.vue'
 
 export const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HelloWorld,
+    component: HomeView,
   },
   {
     path: '/events',
     name: 'Events',
-    component: WelcomeItem
+    component: EventListView
   },
   {
     path: '/chat',
     name: 'Chat',
-    component: WelcomeItem
+    component: EventDetailView
   },
   {
-    path: '/logs',
-    name: 'Logs',
-    component: WelcomeItem
+    path: '/integrations',
+    name: 'Integrations',
+    component: IntegrationsView
   },
   {
     path: '/settings',
     name: 'Settings',
-    component: WelcomeItem
+    component: SettingsView
   },
   // {
   //   path: '/events/:id',
@@ -33,5 +36,5 @@ export const routes = [
   //   // Можна використовувати ледаче завантаження (lazy loading)
   //   component: () => import('@/views/EventDetailView.vue')
   // }
-];
+]
 
