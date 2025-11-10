@@ -5,6 +5,12 @@ const settings = useSettingsStore()
 const saveSettings = () => {
   alert('saved')
 }
+const resetSettings = () => {
+  if (confirm('Are you sure want to reset settings to default values?')) {
+    settings.resetSettings()
+    alert('reset complete')
+  }
+}
 </script>
 
 <template>
@@ -30,6 +36,7 @@ const saveSettings = () => {
     </div>
 
     <button @click="saveSettings">Save</button>
+    <button @click="resetSettings" class="reset-button">Reset</button>
   </div>
 </template>
 

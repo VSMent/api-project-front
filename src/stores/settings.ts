@@ -20,6 +20,10 @@ export const useSettingsStore = defineStore('settings', {
     },
     setPaginationMode(mode: 'offset' | 'cursor') {
       this.paginationMode = mode
+    },
+    resetSettings() {
+      this.$reset()
     }
-  }
+  },
+  persist: true
 })
